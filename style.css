@@ -4,18 +4,18 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #fce4ec; /* Soft pink background */
+    background-color: #fce4ec; 
     font-family: 'Arial', sans-serif;
-    overflow: hidden; /* Prevents scrollbars if the button jumps near the edge */
+    overflow: hidden; 
 }
 
 #question-container, #success-container {
     text-align: center;
     background: white;
-    padding: 60px;
-    border-radius: 30px;
-    box-shadow: 0 20px 35px rgba(0,0,0,0.1);
-    z-index: 1; /* Keeps the card behind the jumping button */
+    padding: 50px; /* Increased from 40px */
+    border-radius: 25px; /* Increased from 20px */
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    z-index: 1; 
 }
 
 .hidden {
@@ -23,48 +23,46 @@ body {
 }
 
 img {
-    width: 300px;
+    width: 240px; /* Increased from 200px */
     height: auto;
-    margin-bottom: 30px;
-    border-radius: 20px;
+    margin-bottom: 25px;
+    border-radius: 12px;
 }
 
 h1 {
     color: #333;
-    font-size: 24px;
+    font-size: 29px; /* Increased from 24px */
 }
 
 .buttons {
-    margin-top: 30px;
+    margin-top: 25px;
     position: relative;
-    height: 60px;
+    height: 60px; /* Increased to accommodate larger buttons */
 }
 
 button {
-    padding: 10px 25px;
-    font-size: 20px;
+    padding: 12px 30px; /* Increased from 10px 25px */
+    font-size: 22px;    /* Increased from 18px */
     border: none;
-    border-radius: 25px;
+    border-radius: 30px;
     cursor: pointer;
 }
 
 #yesBtn {
     background-color: #ff4081;
     color: white;
-    margin-right: 10px;
+    margin-right: 15px;
     transition: transform 0.2s;
 }
 
 #yesBtn:hover {
-    transform: scale(1.1); /* Slightly grows when hovered for a nice feel */
+    transform: scale(1.1); 
 }
 
 #noBtn {
     background-color: #eee;
     color: #666;
     position: absolute; 
-    /* The "magic" parts below */
-    transition: all 0.2s ease; /* Makes the button slide smoothly */
-    z-index: 1000;             /* Ensures it stays in front of everything else */
+    transition: all 0.2s ease; 
+    z-index: 1000;             
 }
-
