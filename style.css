@@ -6,7 +6,7 @@ body {
     margin: 0;
     background-color: #fce4ec; /* Soft pink background */
     font-family: 'Arial', sans-serif;
-    overflow: hidden;
+    overflow: hidden; /* Prevents scrollbars if the button jumps near the edge */
 }
 
 #question-container, #success-container {
@@ -15,6 +15,7 @@ body {
     padding: 40px;
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    z-index: 1; /* Keeps the card behind the jumping button */
 }
 
 .hidden {
@@ -23,7 +24,9 @@ body {
 
 img {
     width: 200px;
+    height: auto;
     margin-bottom: 20px;
+    border-radius: 10px;
 }
 
 h1 {
@@ -43,17 +46,24 @@ button {
     border: none;
     border-radius: 25px;
     cursor: pointer;
-    transition: transform 0.2s;
 }
 
 #yesBtn {
     background-color: #ff4081;
     color: white;
     margin-right: 10px;
+    transition: transform 0.2s;
+}
+
+#yesBtn:hover {
+    transform: scale(1.1); /* Slightly grows when hovered for a nice feel */
 }
 
 #noBtn {
     background-color: #eee;
     color: #666;
-    position: absolute; /* Essential for the jumping effect */
+    position: absolute; 
+    /* The "magic" parts below */
+    transition: all 0.2s ease; /* Makes the button slide smoothly */
+    z-index: 1000;             /* Ensures it stays in front of everything else */
 }
