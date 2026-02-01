@@ -1,0 +1,59 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #fce4ec; /* Soft pink background */
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+}
+
+#question-container, #success-container {
+    text-align: center;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.hidden {
+    display: none !important;
+}
+
+img {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #333;
+    font-size: 24px;
+}
+
+.buttons {
+    margin-top: 20px;
+    position: relative;
+    height: 50px;
+}
+
+button {
+    padding: 10px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+#yesBtn {
+    background-color: #ff4081;
+    color: white;
+    margin-right: 10px;
+}
+
+#noBtn {
+    background-color: #eee;
+    color: #666;
+    position: absolute; /* Essential for the jumping effect */
+}
